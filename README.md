@@ -4,7 +4,7 @@ An asynchronous RESTful backend service built with **FastAPI**, **SQLite**, and 
 
 ---
 
-## 📋 Table of Contents
+##  Table of Contents
 - [Project Overview](#project-overview)
 - [Architecture & Design Decisions](#architecture--design-decisions)
 - [Project Structure](#project-structure)
@@ -17,7 +17,7 @@ An asynchronous RESTful backend service built with **FastAPI**, **SQLite**, and 
 
 ---
 
-## 🎯 Project Overview
+##  Project Overview
 
 Organizations often need to generate personalized certificates for hundreds or thousands of participants after an event or bootcamp. Generating these certificates synchronously locks up HTTP request worker threads and causes client timeouts. 
 
@@ -30,7 +30,7 @@ This project solves this problem by providing:
 
 ---
 
-## 💡 Important Implementation & Design Decisions
+##  Important Implementation & Design Decisions
 
 ### 1. Framework: FastAPI
 - **Reasoning**: FastAPI offers native asynchronous support, type-safe data parsing via Pydantic, high performance, and automatic interactive OpenAPI/Swagger documentation at `/docs`.
@@ -59,7 +59,7 @@ This project solves this problem by providing:
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```text
 bulk-cert-generator/
@@ -93,7 +93,7 @@ bulk-cert-generator/
 
 ---
 
-## ⚙️ How to Set Up the Project
+##  How to Set Up the Project
 
 ### Prerequisites
 - Python 3.10+ installed
@@ -124,7 +124,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🚀 How to Run the Application
+##  How to Run the Application
 
 Start the Uvicorn ASGI server:
 ```bash
@@ -138,7 +138,7 @@ Once running:
 
 ---
 
-## 🧪 How to Run Tests
+##  How to Run Tests
 
 The test suite covers input validation, PDF canvas generation, asynchronous job processing, fault isolation, and certificate downloads.
 
@@ -160,7 +160,7 @@ tests/test_bulk_generator.py::test_download_certificate_and_zip PASSED
 
 ---
 
-## 📤 How to Submit a Certificate Generation Request
+##  How to Submit a Certificate Generation Request
 
 Send a `POST` request to `/api/v1/jobs` with the event details and the list of recipients:
 
@@ -207,7 +207,7 @@ Send a `POST` request to `/api/v1/jobs` with the event details and the list of r
 
 ---
 
-## 📥 How to Retrieve Generated Certificates
+##  How to Retrieve Generated Certificates
 
 ### Step 1: Check Job Status & Progress
 Make a `GET` request using the `id` returned from the submission step:
